@@ -1,25 +1,27 @@
-
-import { HoudiniClient, type RequestHandlerArgs } from '$houdini';
+import { HoudiniClient, type RequestHandlerArgs } from "$houdini"
 
 async function fetchQuery({
 	fetch,
-	text = '',
+	text = "",
 	variables = {},
 	session,
-	metadata
+	metadata,
 }: RequestHandlerArgs) {
-	const url = import.meta.env.VITE_GRAPHQL_ENDPOINT || 'https://api.eiramknitwear.com/graphql';
+	const url = import.meta.env.VITE_GRAPHQL_ENDPOINT || "https://api.eiramknitwear.com/graphql"
 	const result = await fetch(url, {
-		method: 'POST',
+		method: "POST",
 		headers: {
-			'Content-Type': 'application/json'
+			"Content-Type": "application/json",
 		},
 		body: JSON.stringify({
 			query: text,
-			variables
-		})
-	});
-	return await result.json();
+			variables,
+		}),
+	})
+
+	console.log("RESULT HEADERS", result.headers)
+
+	return await result.json()
 }
 
-export default new HoudiniClient(fetchQuery);
+export default new HoudiniClient(fetchQuery)

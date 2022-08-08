@@ -1,0 +1,3 @@
+[submodule "packages/wp"]
+	path = packages/wp
+	url = git@github.com:nelson-tech/svelte-headless-wp.git

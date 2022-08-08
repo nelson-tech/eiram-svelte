@@ -42,7 +42,7 @@ const config = {
 						clientPort: 443,
 					},
 					fs: {
-						allow: [searchForWorkspaceRoot(process.cwd()), "packages/"],
+						allow: [["."], searchForWorkspaceRoot(process.cwd()), "packages/"],
 					},
 			  }
 			: {
