@@ -1,0 +1,13 @@
+query GetAllProductsTest {
+	products(first: 100) {
+		nodes {
+			...ProductDetail
+		}
+		pageInfo {
+			hasNextPage
+			hasPreviousPage
+			startCursor
+			endCursor
+		}
+	}
+}

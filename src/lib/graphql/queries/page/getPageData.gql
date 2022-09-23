@@ -1,0 +1,6 @@
+query GetPageData($slug: ID!) {
+	page(id: $slug, idType: URI) {
+		...PageCommonBase
+		content
+	}
+}

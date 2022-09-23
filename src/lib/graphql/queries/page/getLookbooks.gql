@@ -1,0 +1,24 @@
+query GetLookbooks {
+	lookbooks(first: 100) {
+		nodes {
+			id
+			title
+			slug
+			content
+			gallery {
+				media {
+					video {
+						...ImageBase
+						mediaItemUrl
+					}
+					images {
+						...ImageBase
+					}
+					coverimage {
+						...ImageBase
+					}
+				}
+			}
+		}
+	}
+}

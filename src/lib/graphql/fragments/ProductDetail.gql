@@ -1,0 +1,15 @@
+fragment ProductDetail on Product {
+	...ProductMinBase
+	image {
+		...ImageBase
+	}
+	productCategories {
+		nodes {
+			id
+			slug
+			name
+		}
+	}
+	...ProductPriceBase
+	shortDescription
+}

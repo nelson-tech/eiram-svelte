@@ -1,0 +1,60 @@
+query GetMenuByName($menu: ID!) {
+	menu(id: $menu, idType: NAME) {
+		menuItems(first: 100) {
+			nodes {
+				id
+				path
+				label
+				order
+				title
+				description
+				parentId
+				childItems(first: 100) {
+					nodes {
+						id
+						path
+						label
+						order
+						title
+						description
+						childItems(first: 100) {
+							nodes {
+								id
+								path
+								label
+								order
+								title
+								description
+							}
+						}
+					}
+				}
+			}
+		}
+		siteSettings {
+			colors {
+				highlight
+				accent
+				white
+				black
+				red
+				orange
+				yellow
+				green
+				blue
+				indigo
+				violet
+			}
+			footer {
+				socialmedia {
+					name
+					link
+					icon {
+						style
+						name
+					}
+				}
+			}
+		}
+	}
+}

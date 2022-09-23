@@ -9,6 +9,33 @@
 		"skipLibCheck": true,
 		"sourceMap": true,
 		"strict": true,
-		"paths": { "$houdini": ["./$houdini/"] }
-	}
+		"paths": {
+			"$components/*": ["src/components/*"],
+			"$stores/*": ["src/stores/*"],
+			"$lib": ["src/lib"],
+			"$lib/*": ["src/lib/*"],
+			"$app/*": [".svelte-kit/dev/runtime/app/*"],
+			"$icons/*": ["src/elements/icons/*"],
+			"$ui": ["src/components/ui/*"],
+			"$machines/*": ["src/machines/*"],
+			"$wp/*": ["packages/wp/*"],
+			"$i18n/*": ["packages/i18n/*"],
+			"$houdini": ["./$houdini/"],
+			"$styles": ["./$styles/"],
+			"$common/*": ["src/elements/*"]
+		},
+		"rootDirs": [".", "./.svelte-kit/types", "./$houdini/types"]
+	},
+
+	"include": [
+		"src/**/*.d.ts",
+		"src/**/*.js",
+		"src/**/*.ts",
+		"packages/**/*.ts",
+		"src/**/*.svelte-kit",
+		"./jest-setup.ts"
+		// "$houdini/**/*.d.ts",
+		// "$houdini/**/*.js",
+		// "$houdini/**/*.ts"
+	]
 }
