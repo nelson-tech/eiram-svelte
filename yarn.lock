@@ -1618,10 +1618,10 @@ has@^1.0.3:
   dependencies:
     traverse ">=0.2.4"
 
-houdini@^0.16.0-next.6:
-  version "0.16.0-next.6"
-  resolved "https://registry.yarnpkg.com/houdini/-/houdini-0.16.0-next.6.tgz#4050b826f6a6a2d315698423b81ee5bd01031c7d"
-  integrity sha512-NbaVPMR24jxOz0BCvhg2WhN6g6VDOTSJXFQX/vzoJpKjlz+PBvRLNCfid5yWkPMJvHQL6tXY/ArL8VifWVHO1A==
+houdini@^0.16.5:
+  version "0.16.5"
+  resolved "https://registry.yarnpkg.com/houdini/-/houdini-0.16.5.tgz#3b4ec98e6d2ac040dd57fd202918b0ff22bc7176"
+  integrity sha512-H+PfEgDHqJ5c38cjvVQ9lV++B+61GC6D/HuvXa1DJhNVHiUxUTGkWTQa8szkk86ugL6H3DA8uTSZ1ga189fMWw==
   dependencies:
     "@babel/parser" "^7.17.2"
     "@graphql-tools/schema" "^8.3.7"

@@ -837,6 +837,9 @@ input CategoryToCategoryConnectionWhereArgs {
   """Array of term taxonomy IDs, to match when querying terms."""
   termTaxonomId: [ID]
 
+  """Array of term taxonomy IDs, to match when querying terms."""
+  termTaxonomyId: [ID]
+
   """Whether to prime meta caches for matched terms. Default true."""
   updateTermMetaCache: Boolean
 }
@@ -1048,10 +1051,10 @@ input CategoryToPostConnectionWhereArgs {
   """Array of tag IDs, used to display objects from one tag OR another"""
   tagNotIn: [ID]
 
-  """Array of tag slugs, used to display objects from one tag OR another"""
+  """Array of tag slugs, used to display objects from one tag AND another"""
   tagSlugAnd: [String]
 
-  """Array of tag slugs, used to exclude objects in specified tags"""
+  """Array of tag slugs, used to include objects in ANY specified tags"""
   tagSlugIn: [String]
 
   """Title of the object"""
@@ -1344,7 +1347,7 @@ input CommentToCommentConnectionWhereArgs {
   """Array of content object IDs to exclude affiliated comments for."""
   contentIdNotIn: [ID]
 
-  """Content object name to retrieve affiliated comments for."""
+  """Content object name (i.e. slug ) to retrieve affiliated comments for."""
   contentName: String
 
   """Content Object parent ID to retrieve affiliated comments for."""
@@ -1462,7 +1465,7 @@ input CommentToParentCommentConnectionWhereArgs {
   """Array of content object IDs to exclude affiliated comments for."""
   contentIdNotIn: [ID]
 
-  """Content object name to retrieve affiliated comments for."""
+  """Content object name (i.e. slug ) to retrieve affiliated comments for."""
   contentName: String
 
   """Content Object parent ID to retrieve affiliated comments for."""
@@ -2740,6 +2743,9 @@ input CouponToExcludedProductCategoriesConnectionWhereArgs {
   """Array of term taxonomy IDs, to match when querying terms."""
   termTaxonomId: [ID]
 
+  """Array of term taxonomy IDs, to match when querying terms."""
+  termTaxonomyId: [ID]
+
   """Whether to prime meta caches for matched terms. Default true."""
   updateTermMetaCache: Boolean
 }
@@ -3006,6 +3012,9 @@ input CouponToProductCategoryConnectionWhereArgs {
 
   """Array of term taxonomy IDs, to match when querying terms."""
   termTaxonomId: [ID]
+
+  """Array of term taxonomy IDs, to match when querying terms."""
+  termTaxonomyId: [ID]
 
   """Whether to prime meta caches for matched terms. Default true."""
   updateTermMetaCache: Boolean
@@ -5953,6 +5962,9 @@ input GlobalProductAttributeToTermNodeConnectionWhereArgs {
   """Array of term taxonomy IDs, to match when querying terms."""
   termTaxonomId: [ID]
 
+  """Array of term taxonomy IDs, to match when querying terms."""
+  termTaxonomyId: [ID]
+
   """Whether to prime meta caches for matched terms. Default true."""
   updateTermMetaCache: Boolean
 }
@@ -7863,7 +7875,7 @@ input MediaItemToCommentConnectionWhereArgs {
   """Array of content object IDs to exclude affiliated comments for."""
   contentIdNotIn: [ID]
 
-  """Content object name to retrieve affiliated comments for."""
+  """Content object name (i.e. slug ) to retrieve affiliated comments for."""
   contentName: String
 
   """Content Object parent ID to retrieve affiliated comments for."""
@@ -9341,7 +9353,7 @@ input OrderToCommentConnectionWhereArgs {
   """Array of content object IDs to exclude affiliated comments for."""
   contentIdNotIn: [ID]
 
-  """Content object name to retrieve affiliated comments for."""
+  """Content object name (i.e. slug ) to retrieve affiliated comments for."""
   contentName: String
 
   """Content Object parent ID to retrieve affiliated comments for."""
@@ -10017,7 +10029,7 @@ input PageToCommentConnectionWhereArgs {
   """Array of content object IDs to exclude affiliated comments for."""
   contentIdNotIn: [ID]
 
-  """Content object name to retrieve affiliated comments for."""
+  """Content object name (i.e. slug ) to retrieve affiliated comments for."""
   contentName: String
 
   """Content Object parent ID to retrieve affiliated comments for."""
@@ -10973,10 +10985,10 @@ input PostFormatToPostConnectionWhereArgs {
   """Array of tag IDs, used to display objects from one tag OR another"""
   tagNotIn: [ID]
 
-  """Array of tag slugs, used to display objects from one tag OR another"""
+  """Array of tag slugs, used to display objects from one tag AND another"""
   tagSlugAnd: [String]
 
-  """Array of tag slugs, used to exclude objects in specified tags"""
+  """Array of tag slugs, used to include objects in ANY specified tags"""
   tagSlugIn: [String]
 
   """Title of the object"""
@@ -11308,6 +11320,9 @@ input PostToCategoryConnectionWhereArgs {
   """Array of term taxonomy IDs, to match when querying terms."""
   termTaxonomId: [ID]
 
+  """Array of term taxonomy IDs, to match when querying terms."""
+  termTaxonomyId: [ID]
+
   """Whether to prime meta caches for matched terms. Default true."""
   updateTermMetaCache: Boolean
 }
@@ -11382,7 +11397,7 @@ input PostToCommentConnectionWhereArgs {
   """Array of content object IDs to exclude affiliated comments for."""
   contentIdNotIn: [ID]
 
-  """Content object name to retrieve affiliated comments for."""
+  """Content object name (i.e. slug ) to retrieve affiliated comments for."""
   contentName: String
 
   """Content Object parent ID to retrieve affiliated comments for."""
@@ -11533,6 +11548,9 @@ input PostToPostFormatConnectionWhereArgs {
   """Array of term taxonomy IDs, to match when querying terms."""
   termTaxonomId: [ID]
 
+  """Array of term taxonomy IDs, to match when querying terms."""
+  termTaxonomyId: [ID]
+
   """Whether to prime meta caches for matched terms. Default true."""
   updateTermMetaCache: Boolean
 }
@@ -11662,10 +11680,10 @@ input PostToRevisionConnectionWhereArgs {
   """Array of tag IDs, used to display objects from one tag OR another"""
   tagNotIn: [ID]
 
-  """Array of tag slugs, used to display objects from one tag OR another"""
+  """Array of tag slugs, used to display objects from one tag AND another"""
   tagSlugAnd: [String]
 
-  """Array of tag slugs, used to exclude objects in specified tags"""
+  """Array of tag slugs, used to include objects in ANY specified tags"""
   tagSlugIn: [String]
 
   """Title of the object"""
@@ -11773,6 +11791,9 @@ input PostToTagConnectionWhereArgs {
 
   """Array of term taxonomy IDs, to match when querying terms."""
   termTaxonomId: [ID]
+
+  """Array of term taxonomy IDs, to match when querying terms."""
+  termTaxonomyId: [ID]
 
   """Whether to prime meta caches for matched terms. Default true."""
   updateTermMetaCache: Boolean
@@ -11882,6 +11903,9 @@ input PostToTermNodeConnectionWhereArgs {
 
   """Array of term taxonomy IDs, to match when querying terms."""
   termTaxonomId: [ID]
+
+  """Array of term taxonomy IDs, to match when querying terms."""
+  termTaxonomyId: [ID]
 
   """Whether to prime meta caches for matched terms. Default true."""
   updateTermMetaCache: Boolean
@@ -12874,6 +12898,9 @@ input ProductCategoryToProductCategoryConnectionWhereArgs {
   """Array of term taxonomy IDs, to match when querying terms."""
   termTaxonomId: [ID]
 
+  """Array of term taxonomy IDs, to match when querying terms."""
+  termTaxonomyId: [ID]
+
   """Whether to prime meta caches for matched terms. Default true."""
   updateTermMetaCache: Boolean
 }
@@ -13594,7 +13621,7 @@ input ProductToCommentConnectionWhereArgs {
   """Array of content object IDs to exclude affiliated comments for."""
   contentIdNotIn: [ID]
 
-  """Content object name to retrieve affiliated comments for."""
+  """Content object name (i.e. slug ) to retrieve affiliated comments for."""
   contentName: String
 
   """Content Object parent ID to retrieve affiliated comments for."""
@@ -13931,6 +13958,9 @@ input ProductToProductCategoryConnectionWhereArgs {
   """Array of term taxonomy IDs, to match when querying terms."""
   termTaxonomId: [ID]
 
+  """Array of term taxonomy IDs, to match when querying terms."""
+  termTaxonomyId: [ID]
+
   """Whether to prime meta caches for matched terms. Default true."""
   updateTermMetaCache: Boolean
 }
@@ -14197,6 +14227,9 @@ input ProductToProductTagConnectionWhereArgs {
   """Array of term taxonomy IDs, to match when querying terms."""
   termTaxonomId: [ID]
 
+  """Array of term taxonomy IDs, to match when querying terms."""
+  termTaxonomyId: [ID]
+
   """Whether to prime meta caches for matched terms. Default true."""
   updateTermMetaCache: Boolean
 }
@@ -14302,6 +14335,9 @@ input ProductToProductTypeConnectionWhereArgs {
 
   """Array of term taxonomy IDs, to match when querying terms."""
   termTaxonomId: [ID]
+
+  """Array of term taxonomy IDs, to match when querying terms."""
+  termTaxonomyId: [ID]
 
   """Whether to prime meta caches for matched terms. Default true."""
   updateTermMetaCache: Boolean
@@ -14410,6 +14446,9 @@ input ProductToShippingClassConnectionWhereArgs {
 
   """Array of term taxonomy IDs, to match when querying terms."""
   termTaxonomId: [ID]
+
+  """Array of term taxonomy IDs, to match when querying terms."""
+  termTaxonomyId: [ID]
 
   """Whether to prime meta caches for matched terms. Default true."""
   updateTermMetaCache: Boolean
@@ -14675,6 +14714,9 @@ input ProductToVisibleProductConnectionWhereArgs {
 
   """Array of term taxonomy IDs, to match when querying terms."""
   termTaxonomId: [ID]
+
+  """Array of term taxonomy IDs, to match when querying terms."""
+  termTaxonomyId: [ID]
 
   """Whether to prime meta caches for matched terms. Default true."""
   updateTermMetaCache: Boolean
@@ -15362,6 +15404,9 @@ input ProductVariationToShippingClassConnectionWhereArgs {
   """Array of term taxonomy IDs, to match when querying terms."""
   termTaxonomId: [ID]
 
+  """Array of term taxonomy IDs, to match when querying terms."""
+  termTaxonomyId: [ID]
+
   """Whether to prime meta caches for matched terms. Default true."""
   updateTermMetaCache: Boolean
 }
@@ -15504,6 +15549,9 @@ input ProductVariationToVisibleProductConnectionWhereArgs {
 
   """Array of term taxonomy IDs, to match when querying terms."""
   termTaxonomId: [ID]
+
+  """Array of term taxonomy IDs, to match when querying terms."""
+  termTaxonomyId: [ID]
 
   """Whether to prime meta caches for matched terms. Default true."""
   updateTermMetaCache: Boolean
@@ -17737,6 +17785,9 @@ input RootQueryToCategoryConnectionWhereArgs {
   """Array of term taxonomy IDs, to match when querying terms."""
   termTaxonomId: [ID]
 
+  """Array of term taxonomy IDs, to match when querying terms."""
+  termTaxonomyId: [ID]
+
   """Whether to prime meta caches for matched terms. Default true."""
   updateTermMetaCache: Boolean
 }
@@ -17811,7 +17862,7 @@ input RootQueryToCommentConnectionWhereArgs {
   """Array of content object IDs to exclude affiliated comments for."""
   contentIdNotIn: [ID]
 
-  """Content object name to retrieve affiliated comments for."""
+  """Content object name (i.e. slug ) to retrieve affiliated comments for."""
   contentName: String
 
   """Content Object parent ID to retrieve affiliated comments for."""
@@ -18765,10 +18816,10 @@ input RootQueryToPostConnectionWhereArgs {
   """Array of tag IDs, used to display objects from one tag OR another"""
   tagNotIn: [ID]
 
-  """Array of tag slugs, used to display objects from one tag OR another"""
+  """Array of tag slugs, used to display objects from one tag AND another"""
   tagSlugAnd: [String]
 
-  """Array of tag slugs, used to exclude objects in specified tags"""
+  """Array of tag slugs, used to include objects in ANY specified tags"""
   tagSlugIn: [String]
 
   """Title of the object"""
@@ -18877,6 +18928,9 @@ input RootQueryToPostFormatConnectionWhereArgs {
   """Array of term taxonomy IDs, to match when querying terms."""
   termTaxonomId: [ID]
 
+  """Array of term taxonomy IDs, to match when querying terms."""
+  termTaxonomyId: [ID]
+
   """Whether to prime meta caches for matched terms. Default true."""
   updateTermMetaCache: Boolean
 }
@@ -18984,6 +19038,9 @@ input RootQueryToProductCategoryConnectionWhereArgs {
 
   """Array of term taxonomy IDs, to match when querying terms."""
   termTaxonomId: [ID]
+
+  """Array of term taxonomy IDs, to match when querying terms."""
+  termTaxonomyId: [ID]
 
   """Whether to prime meta caches for matched terms. Default true."""
   updateTermMetaCache: Boolean
@@ -19248,6 +19305,9 @@ input RootQueryToProductTagConnectionWhereArgs {
   """Array of term taxonomy IDs, to match when querying terms."""
   termTaxonomId: [ID]
 
+  """Array of term taxonomy IDs, to match when querying terms."""
+  termTaxonomyId: [ID]
+
   """Whether to prime meta caches for matched terms. Default true."""
   updateTermMetaCache: Boolean
 }
@@ -19355,6 +19415,9 @@ input RootQueryToProductTypeConnectionWhereArgs {
 
   """Array of term taxonomy IDs, to match when querying terms."""
   termTaxonomId: [ID]
+
+  """Array of term taxonomy IDs, to match when querying terms."""
+  termTaxonomyId: [ID]
 
   """Whether to prime meta caches for matched terms. Default true."""
   updateTermMetaCache: Boolean
@@ -19518,6 +19581,9 @@ input RootQueryToShippingClassConnectionWhereArgs {
   """Array of term taxonomy IDs, to match when querying terms."""
   termTaxonomId: [ID]
 
+  """Array of term taxonomy IDs, to match when querying terms."""
+  termTaxonomyId: [ID]
+
   """Whether to prime meta caches for matched terms. Default true."""
   updateTermMetaCache: Boolean
 }
@@ -19644,6 +19710,9 @@ input RootQueryToTagConnectionWhereArgs {
 
   """Array of term taxonomy IDs, to match when querying terms."""
   termTaxonomId: [ID]
+
+  """Array of term taxonomy IDs, to match when querying terms."""
+  termTaxonomyId: [ID]
 
   """Whether to prime meta caches for matched terms. Default true."""
   updateTermMetaCache: Boolean
@@ -19810,6 +19879,9 @@ input RootQueryToTermNodeConnectionWhereArgs {
 
   """Array of term taxonomy IDs, to match when querying terms."""
   termTaxonomId: [ID]
+
+  """Array of term taxonomy IDs, to match when querying terms."""
+  termTaxonomyId: [ID]
 
   """Whether to prime meta caches for matched terms. Default true."""
   updateTermMetaCache: Boolean
@@ -20049,6 +20121,9 @@ input RootQueryToVisibleProductConnectionWhereArgs {
 
   """Array of term taxonomy IDs, to match when querying terms."""
   termTaxonomId: [ID]
+
+  """Array of term taxonomy IDs, to match when querying terms."""
+  termTaxonomyId: [ID]
 
   """Whether to prime meta caches for matched terms. Default true."""
   updateTermMetaCache: Boolean
@@ -21628,10 +21703,10 @@ input TagToPostConnectionWhereArgs {
   """Array of tag IDs, used to display objects from one tag OR another"""
   tagNotIn: [ID]
 
-  """Array of tag slugs, used to display objects from one tag OR another"""
+  """Array of tag slugs, used to display objects from one tag AND another"""
   tagSlugAnd: [String]
 
-  """Array of tag slugs, used to exclude objects in specified tags"""
+  """Array of tag slugs, used to include objects in ANY specified tags"""
   tagSlugIn: [String]
 
   """Title of the object"""
@@ -23736,7 +23811,7 @@ input UserToCommentConnectionWhereArgs {
   """Array of content object IDs to exclude affiliated comments for."""
   contentIdNotIn: [ID]
 
-  """Content object name to retrieve affiliated comments for."""
+  """Content object name (i.e. slug ) to retrieve affiliated comments for."""
   contentName: String
 
   """Content Object parent ID to retrieve affiliated comments for."""
@@ -24220,10 +24295,10 @@ input UserToPostConnectionWhereArgs {
   """Array of tag IDs, used to display objects from one tag OR another"""
   tagNotIn: [ID]
 
-  """Array of tag slugs, used to display objects from one tag OR another"""
+  """Array of tag slugs, used to display objects from one tag AND another"""
   tagSlugAnd: [String]
 
-  """Array of tag slugs, used to exclude objects in specified tags"""
+  """Array of tag slugs, used to include objects in ANY specified tags"""
   tagSlugIn: [String]
 
   """Title of the object"""
