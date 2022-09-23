@@ -10,7 +10,13 @@
 		"check:watch": "svelte-check --tsconfig ./tsconfig.json --watch",
 		"lint": "prettier --check --plugin-search-dir=. . && eslint .",
 		"format": "prettier --write --plugin-search-dir=. .",
-		"generate": "houdini generate"
+		"generate": "houdini generate",
+		"pm2-dev": "pm2 start npm --name \"Eiram Svelte Dev\" -- run dev",
+		"pm2-dev-stop": "pm2 stop \"Eiram Svelte Dev\" && pm2 delete \"Eiram Svelte Dev\"",
+		"pm2-dev-restart": "pm2 restart \"Eiram Svelte Dev\"",
+		"pm2-start": "pm2 start npm --name \"Eiram Svelte Production\" -- run start",
+		"pm2-stop": "pm2 stop \"Eiram Svelte Production\" && pm2 delete \"Eiram Svelte Production\"",
+		"pm2-restart": "pm2 restart \"Eiram Svelte Production\""
 	},
 	"devDependencies": {
 		"@felte/reporter-svelte": "^1.1.3",
