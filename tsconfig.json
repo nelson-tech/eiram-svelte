@@ -9,6 +9,8 @@
 		"skipLibCheck": true,
 		"sourceMap": true,
 		"strict": true,
+		"declaration": true,
+		"declarationDir": "types",
 		"paths": {
 			"$components/*": ["src/components/*"],
 			"$stores/*": ["src/stores/*"],
