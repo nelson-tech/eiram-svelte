@@ -1,7 +1,5 @@
 <script lang="ts">
-	import { Icon } from "@steeze-ui/svelte-icon"
 	import { CachePolicy, GQL_GetCart } from "$houdini"
-	import { Menu, ShoppingBag } from "@steeze-ui/heroicons"
 
 	import modalsService from "$machines/modals"
 
@@ -10,6 +8,7 @@
 	import UserMenu from "./UserMenu.svelte"
 	import MainMenu from "./MainMenu.svelte"
 	import LoadingSpinner from "$common/LoadingSpinner.svelte"
+	import MenuIcon from "$icons/MenuIcon.svelte"
 	import ShoppingCartIcon from "$icons/ShoppingCartIcon.svelte"
 
 	const modalsStore = modalsService()
@@ -43,7 +42,7 @@
 									<!-- onClick={() => setMobileMenuOpen(true)}
 							> -->
 									<span class="sr-only">Open menu</span>
-									<Icon src={Menu} class="h-6 w-6" aria-hidden="true" />
+									<MenuIcon size={6} />
 								</button>
 							</div>
 
