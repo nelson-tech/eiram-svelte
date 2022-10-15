@@ -73,7 +73,10 @@
 
 			<div class="ml-4 flex-1 flex flex-col mb-1 justify-between">
 				<div class="flex justify-between items-center ">
-					<h3 on:click={() => closeModal && closeModal()}>
+					<h3
+						on:click={() => closeModal && closeModal()}
+						on:keyup={() => closeModal && closeModal()}
+					>
 						<a
 							href={`/shop/${lineItem?.product?.node.slug}`}
 							class="font-bold text-sm text-gray-900"
@@ -108,6 +111,11 @@
 
 									quantity && handleQuantityUpdate(quantity - 1)
 								}}
+								on:keyup={() => {
+									console.log("Minus clicked")
+
+									quantity && handleQuantityUpdate(quantity - 1)
+								}}
 							>
 								<MinusIcon size={3} type="solid" />
 							</div>
@@ -125,6 +133,9 @@
 							<div
 								class="cursor-pointer"
 								on:click={() => {
+									quantity && handleQuantityUpdate(quantity + 1)
+								}}
+								on:keyup={() => {
 									quantity && handleQuantityUpdate(quantity + 1)
 								}}
 							>

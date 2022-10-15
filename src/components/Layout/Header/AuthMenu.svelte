@@ -31,11 +31,11 @@
 {/each}
 
 <div>
-	<div
-		class="transition flex cursor-pointer items-center outline-none ring-transparent text-red px-4 py-2 text-sm hover:bg-red hover:text-white"
+	<button
+		class="transition flex cursor-pointer w-full items-center outline-none ring-transparent text-red px-4 py-2 text-sm hover:bg-red hover:text-white"
 		on:click={handleLogout}
 	>
 		<LogoutIcon size={4} styling="mr-1.5" />
 		<div class="target">Sign out</div>
-	</div>
+	</button>
 </div>

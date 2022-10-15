@@ -2,7 +2,7 @@
 
 // import type { User$data } from "$houdini"
 
-type AuthType = {
+type TokensType = {
 	auth: string | null
 	refresh: boolean | string
 }
@@ -13,15 +13,15 @@ type AuthType = {
 declare namespace App {
 	interface Locals {
 		body: any
-		tokens: AuthType
+		tokens: TokensType
 		// user: User$data | null
 		cart?: string | null
 	}
 	// interface Platform {}
 	interface Session {
-		auth: AuthType
+		tokens: TokensType
 		// user: User$data | null
-		cart?: string | null
+		// cart?: string | null
 	}
 	// interface Stuff {}
 }

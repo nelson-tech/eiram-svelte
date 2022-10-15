@@ -170,7 +170,7 @@
 			<div>
 				<span class="pr-1">Already have an account?</span>
 			</div>
-			<div on:click={() => closeModal && closeModal()}>
+			<div on:click={() => closeModal && closeModal()} on:keyup={() => closeModal && closeModal()}>
 				<a
 					href={`/register${$page.params?.redirect ? `/${$page.params.redirect}` : ""}`}
 					title="Click to register."

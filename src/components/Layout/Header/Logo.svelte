@@ -3,7 +3,7 @@
 </script>
 
 {#if mobile}
-	<div class="flex-1">
+	<div class="flex items-center w-full justify-center md:hidden">
 		<a href="/" class="lg:hidden">
 			<span class="sr-only">Workflow</span>
 			<img

@@ -168,7 +168,6 @@
 				<h2 class="col-span-full text-xl font-semibold">Billing Details</h2>
 				<div class="col-span-full grid gap-y-6 md:grid-cols-2 gap-6">
 					<FormField
-						{errors}
 						name="billing.email"
 						label="Email Address"
 						type="email"
@@ -176,7 +175,6 @@
 						containerStyle="w-auto"
 					/>
 					<FormField
-						{errors}
 						name="billing.phone"
 						label="Phone Number"
 						type="text"
@@ -187,7 +185,6 @@
 
 				<div class="col-span-full grid gap-y-6 md:grid-cols-2 gap-6">
 					<FormField
-						{errors}
 						name="billing.firstName"
 						label="First Name"
 						type="text"
@@ -195,7 +192,6 @@
 						containerStyle="w-auto"
 					/>
 					<FormField
-						{errors}
 						name="billing.lastName"
 						label="Last Name"
 						type="text"
@@ -204,16 +200,9 @@
 					/>
 				</div>
 
-				<FormField
-					{errors}
-					name="billing.company"
-					label="Company"
-					type="text"
-					autoComplete="organization"
-				/>
+				<FormField name="billing.company" label="Company" type="text" autoComplete="organization" />
 
 				<FormField
-					{errors}
 					name="billing.address1"
 					label="Address"
 					type="text"
@@ -221,7 +210,6 @@
 				/>
 
 				<FormField
-					{errors}
 					name="billing.address2"
 					label="Address (Continued)"
 					type="text"
@@ -229,7 +217,6 @@
 				/>
 
 				<FormField
-					{errors}
 					name="billing.city"
 					label="City"
 					type="text"
@@ -238,7 +225,6 @@
 				/>
 
 				<FormField
-					{errors}
 					name="billing.state"
 					label="State / Province"
 					type="text"
@@ -247,7 +233,6 @@
 				/>
 
 				<FormField
-					{errors}
 					name="billing.postcode"
 					label="Postal Code"
 					type="text"
@@ -258,7 +243,6 @@
 
 			<div class="mt-6 flex space-x-2">
 				<FormField
-					{errors}
 					name="shipToDifferentAddress"
 					label="Ship to a different address than billing address"
 					labelAfter
@@ -269,7 +253,6 @@
 				/>
 			</div>
 			<FormField
-				{errors}
 				name="customerNote"
 				label="Note"
 				type="text-area"
@@ -282,17 +265,16 @@
 				<div class="grid grid-cols-12 mt-6 mb-4 border-t border-gray-300 pt-4 gap-y-6 gap-x-4">
 					<div class="col-span-full flex items-center">
 						<h2 class="text-xl font-semibold">Shipping Details</h2>
-						<div
+						<button
 							class="ml-4 flex text-gray-400 cursor-pointer text-sm items-center"
 							on:click={handleCopyBilling}
 						>
 							<DocumentDuplicateIcon size={4} type="solid" styling="text-green-main mr-4 mb-2 " />
 							Copy from billing
-						</div>
+						</button>
 					</div>
 					<div class="col-span-full grid gap-y-6 md:grid-cols-2 gap-6">
 						<FormField
-							{errors}
 							name="shipping.email"
 							label="Email Address"
 							type="email"
@@ -300,7 +282,6 @@
 							containerStyle="w-auto"
 						/>
 						<FormField
-							{errors}
 							name="shipping.phone"
 							label="Phone Number"
 							type="text"
@@ -311,8 +292,6 @@
 
 					<div class="col-span-full grid gap-y-6 md:grid-cols-2 gap-6">
 						<FormField
-							registerOptions={{ required: "First name is required." }}
-							{errors}
 							name="shipping.firstName"
 							label="First Name"
 							type="text"
@@ -320,7 +299,6 @@
 							containerStyle="w-auto"
 						/>
 						<FormField
-							{errors}
 							name="shipping.lastName"
 							label="Last Name"
 							type="text"
@@ -330,7 +308,6 @@
 					</div>
 
 					<FormField
-						{errors}
 						name="shipping.company"
 						label="Company"
 						type="text"
@@ -338,7 +315,6 @@
 					/>
 
 					<FormField
-						{errors}
 						name="shipping.address1"
 						label="Address"
 						type="text"
@@ -346,7 +322,6 @@
 					/>
 
 					<FormField
-						{errors}
 						name="shipping.address2"
 						label="Address (Continued)"
 						type="text"
@@ -354,7 +329,6 @@
 					/>
 
 					<FormField
-						{errors}
 						name="shipping.city"
 						label="City"
 						type="text"
@@ -363,7 +337,6 @@
 					/>
 
 					<FormField
-						{errors}
 						name="shipping.state"
 						label="State / Province"
 						type="text"
@@ -372,7 +345,6 @@
 					/>
 
 					<FormField
-						{errors}
 						name="shipping.postcode"
 						label="Postal Code"
 						type="text"

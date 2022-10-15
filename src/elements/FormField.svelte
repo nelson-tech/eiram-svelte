@@ -1,8 +1,8 @@
 <script lang="ts">
 	import { ValidationMessage } from "@felte/reporter-svelte"
 
-	export let errors: any
-	export let registerOptions: any = undefined
+	// export let errors: any
+	// export let registerOptions: any = undefined
 	export let name: string
 	export let label: string
 	export let type: string

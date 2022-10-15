@@ -5,7 +5,7 @@
 
 	import SignInForm from "$components/SignInForm"
 	import ShoppingCart from "$components/ShoppingCart"
-	import MobileMenu from "$components/MobileMenu/MobileMenu.svelte"
+	import MobileMenu from "$components/MobileMenu"
 
 	const modalsStore = modalsService()
 

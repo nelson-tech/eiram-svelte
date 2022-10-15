@@ -70,6 +70,7 @@
 												<div
 													class="font-bold text-sm text-gray-600 transition px-8 hover:bg-accent hover:text-white"
 													on:click={() => closeModal && closeModal()}
+													on:keyup={() => closeModal && closeModal()}
 												>
 													<a href={child.path} title={child.label} class="">
 														<div class="w-full py-3">{child.label}</div>
@@ -84,6 +85,7 @@
 									<div
 										class={bigLinkStyle + " hover:bg-accent hover:text-white"}
 										on:click={() => closeModal && closeModal()}
+										on:keyup={() => closeModal && closeModal()}
 									>
 										<a href={menuItem.path} title={menuItem.label} class="h-full py-3">
 											<div class="w-full py-3">{menuItem.label}</div>
@@ -99,7 +101,11 @@
 			<div class="border-t border-gray-200 py-6 text-sm font-bold text-gray-600">
 				{#if $authStore.matches("signedIn")}
 					{#each userMenu as item}
-						<div class="outline-none" on:click={() => closeModal && closeModal()}>
+						<div
+							class="outline-none"
+							on:click={() => closeModal && closeModal()}
+							on:keyup={() => closeModal && closeModal()}
+						>
 							<a
 								href={item.path}
 								title={item.label}
@@ -110,7 +116,12 @@
 							</a>
 						</div>
 					{/each}
-					<div on:click={handleLogout} title="Sign out" class="transition outline-none">
+					<div
+						on:click={handleLogout}
+						on:keyup={handleLogout}
+						title="Sign out"
+						class="transition outline-none"
+					>
 						<div
 							class="flex items-center w-full px-4 py-2 transition text-red hover:bg-red hover:text-white cursor-pointer"
 						>
@@ -119,7 +130,11 @@
 						</div>
 					</div>
 				{:else}
-					<div class="group" on:click={() => closeModal && closeModal()}>
+					<div
+						class="group"
+						on:click={() => closeModal && closeModal()}
+						on:keyup={() => closeModal && closeModal()}
+					>
 						<a
 							href="/register"
 							title="Register"
@@ -129,7 +144,11 @@
 							<div>Register</div>
 						</a>
 					</div>
-					<div on:click={() => closeModal && closeModal()} class="group">
+					<div
+						on:click={() => closeModal && closeModal()}
+						on:keyup={() => closeModal && closeModal()}
+						class="group"
+					>
 						<a
 							href="/login"
 							title="Sign in"

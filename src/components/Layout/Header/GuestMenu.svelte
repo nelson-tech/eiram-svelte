@@ -12,15 +12,15 @@
 
 <div>
 	<div>
-		<div
+		<button
 			on:click={() => {
 				send("openSignIn")
 			}}
-			class="transition cursor-pointer flex items-center outline-none ring-transparent text-highlight px-4 py-2 text-sm hover:bg-highlight hover:text-white"
+			class="transition w-full cursor-pointer flex items-center outline-none ring-transparent text-highlight px-4 py-2 text-sm hover:bg-highlight hover:text-white"
 		>
 			<LoginIcon size={4} styling="mr-1.5" />
 			<div class="target">Sign in</div>
-		</div>
+		</button>
 	</div>
 	<div>
 		<div class="group">
